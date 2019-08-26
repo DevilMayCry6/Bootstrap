@@ -1,0 +1,33 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+            <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+            <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h2>动态标签</h2>
+            <p><strong>提示：</strong>与 .tab-pane 和 data-toggle="tab"(data-toggle="pill")一同使用，设置标签页对应的内容随标签的切换而改变</p>
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#home" data-toggle="tab">首页</a></li>
+                <li><a href="#menu1" data-toggle="tab">1</a></li>
+                <li><a href="#menu2" data-toggle="tab">2</a></li>
+                <li><a href="#menu3" data-toggle="tab">3</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                    <h3>首页</h3>
+                </div>
+                <div id="menu1" class="tab-pane fade">
+                    <h3>菜单</h3>
+                </div>
+                <div id="menu2" class="tab-pane fade">
+                    <h3>菜单2</h3>
+                </div>
+                <div id="menu3" class="tab-pane fade">
+                    <h3>菜单3</h3>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

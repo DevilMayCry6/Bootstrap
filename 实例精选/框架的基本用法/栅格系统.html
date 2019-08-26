@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<head>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <style>
+            .col-md-3{
+                background: aqua;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;padding: 20px;
+            }
+            .col-md-4{
+                background: aqua;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;padding: 20px;
+            }
+            .col-md-6{
+                background: aqua;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;padding: 20px;
+            }
+            .col-md-8{
+                background: aqua;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;padding: 20px;
+            }
+            .col-xs-6{
+                background: aqua;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;padding: 20px;
+            }
+            .col-sm-6{
+                background: aqua;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;padding: 20px;
+
+            }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>引导网格的例子<small>小标题</small></h1>
+            <p>基本的网格布局，使您熟悉在引导网格系统内构建。</p>
+        </div>
+            <h3>三个相同的列</h3>
+        <p>从桌面开始获得三个等宽列，<strong>并扩展到大型桌面。</strong>在移动设备、平板电脑和以下设备上，列将自动堆叠。</p>
+        <div class="row" >
+            <div class=" col-md-4">.col-md-4</div>
+            <div class="col-md-4"> .col-md-4</div>
+            <div class=" col-md-4"> .col-md-4</div>
+        </div>
+            <h3>三个不同的列</h3>
+        <P>
+            获取三个列，<strong>从桌面开始，扩展到各种宽度的大型桌面。</strong>请记住，对于单个水平块，网格列的和应为12。不仅如此，无论视图端口是什么，列都会开始堆积。
+        </P>
+        <div class="row">
+            <div class="col-md-3">.col-md-3</div>
+            <div class="col-md-6">.col-md-6</div>
+            <div class="col-md-3">.col-nd-3</div>
+        </div>
+            <h3>两列</h3>
+        <p>获取两个列，<strong>从桌面开始并扩展到大型桌面。</strong></p>
+        <div class="row">
+            <div class="col-md-8">.col-md-8</div>
+            <div class="col-md-4">.col-md-4</div>
+        </div>
+        <div class="page-header">
+            <h3>全宽，单列</h3>
+            <p class="text-warning">对于全宽元素，不需要网格类。</p>
+       </div>
+       <div class="page-header">
+            <h3>两个列和两个嵌套列</h3>
+            <p>根据文档，嵌套很容易—只需在现有列中放入一行列。这将为您提供两个列，<small>从桌面开始并扩展到大型桌面，</small>在较大的列中还有两个列(宽度相同)。</p>
+            <p>在移动设备大小、平板电脑大小和向下位置，这些列及其嵌套列将堆叠。</p>
+            <div class="row">
+                <div class="col-md-8">.col-md-8
+                    <div class="row">
+                        <div class="col-md-6">.col-md-6</div>
+                        <div class="col-md-6">.col-md-6</div>
+                    </div>
+                </div>
+                <div class="col-md-4">.col-md-4</div>
+            </div>
+        </div>
+        <div class="page-header">
+            <h3>混合：移动和桌面</h3>
+            <p>Bootstrap 3网格系统有四层类:xs(手机)、sm(平板电脑)、md(台式机)和lg(更大的台式机)。您几乎可以使用这些类的任何组合来创建更加动态和灵活的布局。</p>
+            <p>每一层的类都在扩展，这意味着如果您计划为xs和sm设置相同的宽度，您只需要指定xs。</p>
+            <div class="row">
+                <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+                <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+            </div>
+            <div class="row" style="margin-top:20px;">
+                <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+                <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+                <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+            </div>
+            <div class="row" style="margin-top:20px">
+                <div class="col-xs-6">.col-xs-6</div>
+                <div class="col-xs-6">.col-xs-6</div>
+            </div>
+        </div>
+        <div class="page-header">
+            <h3>混合:移动、平板和桌面</h3>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-lg-8">.col-xs-12 .col-sm-8 .cl-lg-8</div>
+                <div class="col-sm-6 col-lg-4">.col-sm-6 .col-lg-4</div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+                <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+                <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+            </div>
+        </div>
+        <div class="page-header">
+            <h3>列清</h3>
+            <p><a href="#">清除特定断点处的浮动，</a>以防止不均匀内容的笨拙包装。</p>
+            <div class="row">
+                <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3 <br>例如，调整你的视窗大小或者在你的手机上查看它。</div>
+                <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+                <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+                <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+            </div>
+        </div>
+        <h3>偏移、推和拉重置</h3>
+        <p>在特定断点处重置偏移量、推和拉。</p>
+        <div class="page-header">
+            <div class="row">
+                <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+                <div class="col-sm-5 .col-sm-offset-2 col-md-6 .col-md-offset-0">.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0</div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+                <div class="col-sm-6 col-md-5 col-offset-2 col-lg-6 col-lg-offset-0">.col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

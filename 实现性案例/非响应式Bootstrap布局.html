@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            body{
+                padding-top: 70px;
+            }
+            .col-md-4{
+                padding: 15px;
+                background: #eee;
+                background: rgba(86,61,124,.15);
+                border: 1px solid #ddd;
+                border: 1px solid rgba(86,61,124,.15);
+            }
+
+            .container{
+                width: 970px;
+                max-width: none !important;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand">Project name</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="active"><a href="#">Active</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header"><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                   
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                    
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container">
+            <div class="page-header">
+                <h1>Non-responsive Bootstrap</h1>
+                <p class="head">Disable the responsiveness of Bootstrap by fixing the width of the container and using the first grid system tier. <a href="#"> Read the documentation</a> for more information.</p>
+            </div>
+            <h3>What changes</h3>
+            <p>Note the lack of the <code> <meta name="viewport" content="width=device-width, initial-scale=1"></code>, which disables the zooming aspect of sites in mobile devices. In addition, we reset our container's width and changed the navbar to prevent collapsing, and are basically good to go.</p>
+            <h3>Regarding navbars</h3>
+            <p>As a heads up, the navbar component is rather tricky here in that the styles for displaying it are rather specific and detailed. Overrides to ensure desktop styles display are not as performant or sleek as one would like. Just be aware there may be potential gotchas as you build on top of this example when using the navbar.</p>
+            <h3>Browsers, scrolling, and fixed elements</h3>
+            <p>Browsers, <strong class="text-danger"> scrolling, and</strong> fixed elements</p>
+            <p>There is no way around this as it's default browser behavior. The only solution is a responsive layout or using a non-fixed element.</p>
+            <h3>Non-responsive grid system</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    One
+                </div>
+                <div class="col-md-4">
+                    2
+                </div>
+                <div class="col-md-4">
+                    3
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

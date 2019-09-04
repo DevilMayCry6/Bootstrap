@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-static" id="myScrollspy">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse"
+                            data-toggle=".s">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Home</a>
+                </div>
+                <div class="collapse navbar-collapse bs-js-navbar-scrollspy">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#a">a</a></li>
+                        <li><a href="#b">b</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#c">c</a></li>
+                                <li><a href="#d">d</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div data-spy="scroll" data-target="#myScrollsy" data-offset="0"
+                style="height: 200px;overflow:auto;position:relative;">
+            <!-- <div class="section">
+                <h4 id="a">1 <small><a href="#" onclick="removeSection(this);">&times;</a></small></h4>
+                <p>1111111</p>
+                <p>112222</p>
+            </div>
+            <div class="section">
+                <h4 id="b">2 <small><a href="#" onclick="removeSection(this)">&times;</a></small></h4>
+                <p>111123</p>
+            </div>
+            <div class="section">
+                <h4 id="c">3 <small><a href="#" onclick="removeSection(this)">&times;</a></small></h4>
+            </div>
+            <div class="section">
+                <h4 id="d">section <small><a href="#" onclick="removeSection(this)">&times;</a></small></h4>
+                <p>removeSection</p>
+            </div>
+        </div> -->
+        
+        <div class="section">
+            <h1 id="a">2312</h1>
+            <p>2131</p>
+            <p>23</p>
+        </div>
+        <div class="section">
+            <h1 id="b">bbb</h1>
+            <p>bbbbb</p>
+        </div>
+        <div class="section">
+            <h1 id="c"> 2</h1>
+            <p>123213</p>
+        </div>
+        <div class="section">
+            <h1 id="d"></h1>
+            <p>sda</p>
+        </div>
+</div>
+
+
+        <span id="activeitem" style="color:red;"></span>
+        <script>
+            $(function(){
+                removeSection=function(e){
+                    $(e).parents(".section").remove();
+                    $('[data-spy="scroll"]').each(function(){
+                        var $spy = $(this).scrollspy('refresh')
+                    })
+                }
+                $("#myScrollspy").scrollspy();
+                $("#myScrollspy").on('activate.bs.scrollspy',function(){
+                    var currentItem = $(".nav li.active > a").text();
+                    $("#activeitem").html("目前您正在查看 - " + currentItem)
+                })
+            })
+        </script>
+        
+    </body>
+</html>

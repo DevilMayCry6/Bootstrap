@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Bootstrap 实例 - 折叠（Collapse）插件事件</title>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a href="#collapseexample" data-toggle="collapse" dat-parent="#accordion">
+                            点我展开与折叠
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseexample" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        body
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(function(){$("#collapseexample").on("show.bs.collapse",function(){alert("展开时会弹出本警告")})})
+        </script>
+    </body>
+</html>

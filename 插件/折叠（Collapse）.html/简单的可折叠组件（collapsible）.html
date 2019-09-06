@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>不带 accordion 标记的简单可折叠组件（collapsible）</title>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">简单的可折叠组件</button>
+        <div id="demo" class="collapse">
+            与折叠面板不同，没有添加属性 data-parent
+        </div>
+        
+        <button class="btn btn-info" data-toggle="collapse" data-target="#demo2">隐藏内容</button>
+        <div id="demo2" class="">
+            <!-- 不添加.collapse -->
+            <p>.collapse 隐藏内容</p>
+            <p>.collapse in 显示内容</p>
+            <p>.collapsing 当过渡效果开始时被添加，当过渡效果完成时被移除</p>
+        </div>
+    </body>
+</html>

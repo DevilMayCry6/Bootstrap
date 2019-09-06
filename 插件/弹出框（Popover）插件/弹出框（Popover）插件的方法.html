@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container" style="padding: 100px 50px 10px;">
+            <button class="btn btn-default popover-show"
+                    title="Popover title" data-container="body"
+                    data-toggle="popover" data-placement="left"
+                    data-content="左侧的 Popover 中的一些内容 --show 方法">
+                左侧的 Popover    
+            </button>
+            <button class="btn btn-primary popover-hide"
+                    title="Popover title"data-container="body"
+                    data-toggle="popover" data-placement="top"
+                    data-content="顶部的 Popover 中的一些内容 -- hide 方法">
+                顶部的 Popover
+            </button>
+            <button class="btn btn-success popover-destroy"
+                    title="Popover title" data-container="body"
+                    data-toggle="popover" data-placement="bottom"
+                    data-content="底部的 Popover 中的一些内容 -- destroy 方法">
+                底部的 Popover
+            </button>
+            <button class="btn btn-warning popover-toggle"
+                    title="popover-title" data-container="body"
+                    data-toggle="popover" data-placement="right"
+                    data-content="右侧的 Popover 中的一些内容 -- toggle内容">
+                右侧的 Popover    
+            </button>
+            <p class="popover-options">
+                <a href="#" class="btn btn-warning" title="<h2>Title</h2>"
+                    data-container="body" data-toggle="popover"
+                    data-content="<h4>Popover 中的一些内容 --options 方法</h4>">
+                    Popover
+                </a>
+            </p>
+            <script>
+                $(function(){
+                    $(".popover-show").popover("show")
+                })
+                $(function(){
+                    $(".popover-hide").popover('hide')
+                })
+                $(function(){$('.popover-destroy').popover('destroy')})
+                $(function(){$('.popover-toggle').popover('toggle')})
+                $(function(){$('.popover-options a').popover({html:true})})
+            </script>
+        </div>
+    </body>
+</html>

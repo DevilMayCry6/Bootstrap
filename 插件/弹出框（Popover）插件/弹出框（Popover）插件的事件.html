@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Bootstrap 实例 - 弹出框（Popover）插件事件</title>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container" style="padding: 100px 50px 10px;">
+            <button class="btn btn-primary popover-show"
+                    title="Popover" data-container="body"
+                    data-toggle="popover"
+                    data-content="左侧的 Popover 中的一些内容 -- show 方法">
+                左侧的 Popover
+            </button>
+        </div>
+        <script>
+            $(function(){$('.popover-show').popover('show')})
+            $(function(){$(".popover-show").on("shown.bs.popover",function(){
+                alert("当显示时警告消息")
+            })})
+        </script>
+    </body>
+</html>

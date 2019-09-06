@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Bootstrap 实例 - 警告框（Alert）插件 alert() 方法</title>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <h3>警告框(ALert) 插件 alert() 方法</h3>
+        <div id="myAlert" class="alert alert-success">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <strong>成功</strong>成功
+        </div>
+        <div id="myAlert2" class="alert alert-warning">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+             <p><strong>警告</strong> 警告</p>
+        </div>
+        <script>
+            $(function(){
+                // $(".close").click(function(){
+                    $("#yAlert").alert();
+                    $("#myAlert2").alert();
+                })
+            // })
+        </script>
+    </body>
+</html>

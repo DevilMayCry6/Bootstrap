@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Bootstrap 实例 - 标签页（Tab）插件事件</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <hr>
+    <p class="active-tab"><strong>激活的标签页</strong>：<span></span></p>
+    <p class="previous-tab"><strong>前一个激活的标签页</strong>：<span></span></p>
+    <ul id="myTab" class="nav nav-tabs">
+        <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+        <li><a href="#1" data-toggle="tab">1</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                dropdown
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#2-1" data-toggle="tab">2-1</a></li>
+                <li><a href="#2-2" data-toggle="tab">2-2</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="home">
+            <p>home</p>
+        </div>
+        <div class="tab-pane fade" id="1">
+            <p>1</p>
+        </div>
+        <div class="tab-pane fade" id="2-1">
+            <p>2-1</p>
+        </div>
+        <div class="tab-pane fade" id="2-2">
+            <p>2-2</p>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('a[data-toggle="tab"]').on('show.bs.tab',function(e){
+                //获取已激活的标签页的名称
+            
+            var activeTab = $(e.target).text();
+            //获取前一个激活的标签页的名称
+            var previousTab = $(e.relatedTarget).text();
+            $('.active-tab span').html(activeTab);
+            $('.previous-tab span').html(previousTab);
+        })})
+    </script>
+</body>
+</html>
